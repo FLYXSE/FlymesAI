@@ -112,14 +112,14 @@ plain('gear')     // '🔧' — обычный глиф: таблицы, fallbac
 ## Деплой
 
 ```bash
-cp tgcloud/lib/config.example.js tgcloud/lib/config.js   # затем вписать свои значения
+cp config.example.js tgcloud/lib/config.js   # затем вписать свои значения
 npx tgcloud login     # токен: BotFather → бот → Serverless → CLI Access
 npx tgcloud status
 npx tgcloud push
 npx tgcloud migrate   # только при изменениях schema.js
 ```
 
-`tgcloud/lib/config.js` не хранится в репозитории: в нём ключ шлюза и `MASTER_SECRET`. Шаблон с теми же экспортами — `config.example.js`.
+`tgcloud/lib/config.js` не хранится в репозитории: в нём ключ шлюза и `MASTER_SECRET`. Шаблон с теми же экспортами — `config.example.js` в корне (вне `tgcloud/`, чтобы не деплоиться вместе с модулями).
 
 Порядок при изменениях схемы: сначала `migrate --local --safe` (создание таблиц), перенос данных, потом дроп колонок (`--local --yes`) — `migrate` удаляет данные без возможности отката.
 

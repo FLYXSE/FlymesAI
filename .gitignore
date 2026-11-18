@@ -8,6 +8,6 @@
 node_modules/
 
 # Real secrets: this file holds AI_API_KEY and MASTER_SECRET and is generated
-# from tgcloud/lib/config.example.js. Deploys read it from disk, so keeping it
-# out of git does not affect `tgcloud push`.
+# from config.example.js in the repo root. Deploys read it from disk, so keeping
+# it out of git does not affect `tgcloud push`.
 tgcloud/lib/config.js

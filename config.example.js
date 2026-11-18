@@ -1,6 +1,6 @@
 // Template for tgcloud/lib/config.js — copy it and fill in your own values:
 //
-//   cp tgcloud/lib/config.example.js tgcloud/lib/config.js
+//   cp config.example.js tgcloud/lib/config.js
 //
 // config.js is git-ignored because everything in it is bundled into the
 // deployed modules, so any secret here ships with the bot.
